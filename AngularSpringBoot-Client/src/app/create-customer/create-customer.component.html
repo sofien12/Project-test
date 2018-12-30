@@ -1,0 +1,121 @@
+
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div >
+    <div>
+      <label >Cureency ID :</label>
+      <select style="position:absolute; right:10px;width:50%"  id="curncyid" required [(ngModel)]="customer.curncyid" name="curncyid">
+        <option value="SAR">SAR </option>
+        <option value="USA">USA</option>
+        <option value="EURO">EURO</option>
+      </select>
+    </div>
+    <div >
+      <label>Description :</label>
+      <select   style=" position:absolute;right:10px; width:50%" id="crncydsc" required [(ngModel)]="customer.crncydsc" name="crncydsc">
+        <option value="Saudi Riadh">Saudi Riadh </option>
+        <option value="US Dollar">US Dollar</option>
+        <option value="EURO">EURO</option>
+      </select>
+    
+    </div>
+    <div >
+        <label>Arabic Description :</label>
+        <select   style=" position:absolute;right:10px; width:50%"  id="crncydsca" required [(ngModel)]="customer.crncydsca" name="crncydsca">
+          <option value="ريال سعودي ">ريال سعودي  </option>
+          <option value="دولار امريكي">دولار امريكي</option>
+          <option value="يورو">يورو</option>
+        </select>
+      </div>
+    <div >
+        <label>currency symbole :</label>
+        <select   style=" position:absolute;right:10px; width:50%" id="crncysym" required [(ngModel)]="customer.crncysym" name="crncysym">
+          <option value="SR">SR </option>
+          <option value="$">$</option>
+          <option value="£">£</option>
+        </select>
+      </div>
+      <div >
+          <label>Negative Sign:</label>
+          <select   style=" position:absolute;right:100px; width:20%" id="negsymbl" required [(ngModel)]="customer.negsymbl" name="negsymbl">
+            <option value="1">1 </option>
+            <option value="-2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <h1>Display symbole</h1>
+            <p class="form-check-inline">
+                <input class="form-check-input" type="radio" name="ngsmampc" value="1" 
+                required [(ngModel)]="customer.ngsmampc" > Before Amount 
+            </p>
+            <p class="form-check-inline">
+                <input class="form-check-input" type="radio" name="ngsmampc" value="2"
+                required [(ngModel)]="customer.ngsmampc" > After Amount
+            </p>
+
+            <h1>Display Sign</h1>
+ 
+         
+            <p class="form-check-inline">
+                <input class="form-check-input" type="radio" name="negsymbl" value="1" 
+                required [(ngModel)]="customer.negsymbl" > Before Amount 
+            </p>
+            <p class="form-check-inline">
+                <input class="form-check-input" type="radio" name="negsymbl" value="2"
+                required [(ngModel)]="customer.negsymbl" > After Amount
+            </p>
+
+            <h1>Separator</h1>
+            <div >
+                <label>Decimal :</label>
+                <select   style=" position:absolute;right:60px; width:50%" id="decsymbl" required [(ngModel)]="customer.decsymbl" name="decsymbl">
+                  <option value="1">Period </option>
+                  <option value="2">Comma</option>
+                  <option value="3">Space</option>
+                </select>
+              </div>
+              <div >
+                  <label>Thousands :</label>
+                  <select   style=" position:absolute;right:60px; width:50%" id="thoussym" required [(ngModel)]="customer.thoussym" name="thoussym">
+                    <option value="1">Period </option>
+                    <option value="2">Comma</option>
+                    <option value="3">Space</option>
+                  </select>
+                </div>
+                
+                    <div>
+                        <label>Currency Unit: </label>
+                        <input type="text"  class="form-control"  id="curtext_1" required [(ngModel)]="customer.curtext_1" name="curtext_1">
+                  </div>
+                  <div>
+                      <label>Subunit Connector: </label>
+                      <input type="text"  class="form-control" id="curtext_2" required [(ngModel)]="customer.curtext_2" name="curtext_2">
+                </div>
+                <div>
+                    <label>Currency Subunit: </label>
+                    <input type="text"  class="form-control" id="curtext_3" required [(ngModel)]="customer.curtext_3" name="curtext_3">
+              </div>
+              <div>
+                  <label>Currency Unit Arabic: </label>
+                  <input type="text"  class="form-control" id="curtexta_1" required [(ngModel)]="customer.curtexta_1" name="curtexta_1">
+            </div>
+            <div>
+                <label>Subunit Connector Arabic :  </label>
+                <input type="text"  class="form-control" id="curtexta_2" required [(ngModel)]="customer.curtexta_2" name="curtexta_2">
+          </div>
+          <div>
+              <label>Currency Subunit Arabic :  </label>
+              <input type="text"   class="form-control" id="curtexta_3" required [(ngModel)]="customer.curtexta_3" name="curtexta_3">
+        </div>
+      
+              
+                
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+  
+</div>
+<div [hidden]="!submitted">
+    <h4>You submitted successfully!</h4>
+  </div>
+
